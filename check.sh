@@ -1,10 +1,9 @@
-result=0    # 0 = everything passed so far
-
+result=0
 for i in 1 2 3 4; do
     dir="Testcase$i"
     outdir="Testcase${i}Diff"
-    pass=yes          # assume this Testcase passes until we find a problem
-    found_diff=no     # did any pair in this folder differ?
+    pass=yes
+    found_diff=no
 
     for f in "$dir"/*.1.txt; do
         name=$(basename "$f" .1.txt)
